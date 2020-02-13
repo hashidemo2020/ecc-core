@@ -18,3 +18,7 @@ variable "vpc_remote_workspace_name" {
 variable "services_subnet_cidr" {
   description = "CIDR block for the services subnet"
 }
+
+variable "database_subnet_cidr" {
+  description = "CIDR block for the database subnet"
+}
