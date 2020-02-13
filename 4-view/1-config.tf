@@ -9,8 +9,8 @@ data "terraform_remote_state" "subnet" {
 }
 
 resource "random_id" "random" {
-  keepers {
-    uuid = {uuid()}
+  keepers = {
+    uuid = uuid()
   }
   byte_length = 8
 }
