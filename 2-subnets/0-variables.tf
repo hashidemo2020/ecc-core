@@ -7,6 +7,10 @@ variable "default_tags" {
   type        = map(string)
 }
 
+variable "vpc_organization" {
+  description = "org where Remote Workspace for VPC is defined"
+}
+
 variable "vpc_remote_workspace_name" {
   description = "Remote Workspace where VPC is defined"
 }
