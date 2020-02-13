@@ -12,7 +12,7 @@ data "terraform_remote_state" "vpc" {
 
   config = {
     workspaces = {
-      name = var.vpc_remote_workspace
+      name = var.vpc_remote_workspace_name
     }
   }
 }

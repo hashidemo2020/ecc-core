@@ -7,3 +7,10 @@ variable "default_tags" {
   type        = map(string)
 }
 
+variable "vpc_remote_workspace_name" {
+  description = "Remote Workspace where VPC is defined"
+}
+
+variable "services_subnet_cidr" {
+  description = "CIDR block for the services subnet"
+}
