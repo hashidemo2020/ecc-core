@@ -11,9 +11,8 @@ data "terraform_remote_state" "vpc" {
   backend = "remote"
 
   config = {
-    organization = "hashicorp"
     workspaces = {
-      name = "vpc-prod"
+      name = var.vpc_remote_workspace
     }
   }
 }
