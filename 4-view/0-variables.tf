@@ -5,3 +5,7 @@ variable "remote_organization" {
 variable "subnet_remote_workspace_name" {
   description = "Remote Workspace where subnet is defined"
 }
+
+variable "token" {
+  description = "Token for the ECC Org"
+}
