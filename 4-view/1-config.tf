@@ -14,9 +14,9 @@ resource "null_resource" "rotate" {
 }
 
 data "terraform_remote_state" "subnet" {
-  backend = "remote" {
+  backend = "remote" 
   
-//  config = {
+  config = {
     hostname = "app.terraform.io"
     organization = var.remote_organization
     token = var.token
