@@ -2,6 +2,7 @@ data "terraform_remote_state" "subnet" {
   backend = "remote"
   config = {
     organization = var.remote_organization
+    token = var.token
     workspaces = {
       name = var.subnet_remote_workspace_name
     }
