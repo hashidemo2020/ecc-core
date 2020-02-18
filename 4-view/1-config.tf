@@ -1,6 +1,8 @@
 data "terraform_remote_state" "subnet" {
   backend = "remote"
+  
   config = {
+    hostname = "app.terraform.io"
     organization = var.remote_organization
     token = var.token
     workspaces = {
