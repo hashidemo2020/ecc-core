@@ -19,7 +19,7 @@ data "terraform_remote_state" "subnet" {
   config = {
     hostname = "app.terraform.io"
     organization = var.remote_organization
-    token = var.token
+    token = var.token_org
     workspaces = {
       name = var.subnet_remote_workspace_name
     }
