@@ -13,6 +13,7 @@ resource "null_resource" "rotate" {
   }
 }
 
+/*
 data "terraform_remote_state" "subnet" {
   backend = "remote" 
   
@@ -23,5 +24,16 @@ data "terraform_remote_state" "subnet" {
     workspaces = {
       name = var.subnet_remote_workspace_name
     }
+  }
+}
+*/
+  
+data "terraform_remote_state" "subnet" {
+  backend = "atlas"
+
+  config = {
+    address = "https://app.terraform.io"
+    name     = "${var.remote_organization}/${var.subnet_remote_workspace_name}"
+    access_token    = var.token_org
   }
 }
